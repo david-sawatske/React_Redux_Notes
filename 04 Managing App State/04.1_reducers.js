@@ -12,6 +12,7 @@
 // ./src/reducers/reducer_books.js
 
 // 1. write the books reducer function and export
+// this reducer will always return an array of books
 export default function() {
   return [
     { title: 'Title 1' },
@@ -29,9 +30,9 @@ import BooksReducer from './reducer_books';
 
 // tell Redux how to create app state by passing objects to combineReducers()
 const rootReducer = combineReducers({  // this fn maps  the app's state
-  books: BooksReducer  // key is the piece of state and val is reducer itself
-});
+  books: BooksReducer  // this adds the key 'books' to the global app state
+});                    //   - key is the piece of state and val is reducer itself
 
 export default rootReducer;
 
-// continued // 
+// continued //

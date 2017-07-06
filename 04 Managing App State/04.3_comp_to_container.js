@@ -39,6 +39,7 @@ function mapStateToProps(state) { // takes app entire app state as arg
 export default connect(mapStateToProps)(BookList);
 
 
+
 // Addditional points about using connect() fn
 // when App state changes, containers will instantly re-render and the obj in
 // the state fn (mapStateToProps(state) above) will be assiged as props
