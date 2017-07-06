@@ -46,7 +46,7 @@ export default function(state = null, action) { // 'null' for when App boots up
     case 'BOOK_SELECTED':     // decides on whether to change state based on it
       return action.payload;  // if action is 'BOOK_SELECTED' we return the
   }                           // action.payload, which is the selected book
-  return state;
+  return state;  // return current state if no changes are made
 }
 
 // Reducers need to be connected into the Combined Reducer statement in index.js

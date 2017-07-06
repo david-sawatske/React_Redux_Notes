@@ -5,7 +5,7 @@
 
 // 1. book list item is clicked, Action Creator is triggered
 // 2. Action creator returns an object that is automatically sent to all Reducers
-//    - ex object { type: BOOK_SELECTED, book: {title: 'Book 2'}}
+//    - ex object { type: BOOK_SELECTED, payload: {title: 'Book 2'}}
 // 3. Reducers can choose a different piece of state, depending on the action
 //    - behavior is set by a switch statement in Reducer which reads 'type'
 //    - Reducer returns a new value of state (or current state if no change)
@@ -41,7 +41,7 @@ function mapDispatchToProps(dispatch) {
   //  - the 'dispatch' arg is a fn that takes the result of 'selectBook()' and
   //    spits them to all of the Reducers in the App
   return bindActionCreators({ selectBook: selectBook }, dispatch)
-  // becasue of the 'selectBook' key, we can call 'this.props.selectBook'
+  // because of the 'selectBook' key, we can call 'this.props.selectBook'
   // which will call the Action Creator
 }
 
