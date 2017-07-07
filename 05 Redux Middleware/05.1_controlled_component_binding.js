@@ -91,7 +91,8 @@ onInputChange(event) { // all DOM event handlers come with 'event' obj
 render() {
   return (
 // ...
-
+// //
+// ...
 // fix for error "property 'setState' undefined" (can't find it from 'this')
 export default class SearchBar extends Component {
   constructor(props) {
@@ -105,3 +106,4 @@ export default class SearchBar extends Component {
     // bound instance of the fn with the same name, 'onInputChange'
     // - replace existing fn with an identical bound instance on the fn
   }
+// ...
