@@ -1,8 +1,6 @@
 // Create reducer for handling the FETCH_WEATHER Actio
 // new file ./reducers/reducer_weather
 
-import * as types from '../actions/action_types';
-
 export default function(state = [], action) {
   switch (action.type) {
     case types.FETCH_WEATHER:
@@ -50,11 +48,9 @@ export default rootReducer;
 // what data structure to store weather state? want mult rows for mult cities
 // - array will be a good fit
 
-import * as types from '../actions/action_types';
-
 export default function(state = [], action) { // initialize state as an array
-  switch (action.type) {       // we need a switch statement to handle only the
-    case types.FETCH_WEATHER:  // 'FETCH_WEATHER' action type
+  switch (action.type) {   // we need a switch statement to handle only the
+    case FETCH_WEATHER:    // 'FETCH_WEATHER' action type
       return [action.payload.data, ...state]; // array as we will have mult cities
   }                                           // with wanted data from the Action
   return state;                               // ' ...state]' portion means we add
