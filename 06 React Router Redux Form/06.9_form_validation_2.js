@@ -35,3 +35,22 @@ class PostsNew extends Component {
     );
   }
 // ...
+
+
+// Navigation to back to all posts
+// ./components/posts_new
+import { Link } from 'react-router-dom'; // import
+
+class PostsNew extends Component {
+  // ...
+  render() {
+    // ...
+        <button type="submit" className="btn btn-primary">Submit</button>
+
+        <Link className="btn btn-danger" to="/"> // add Link
+          Back to Posts Index
+        </Link>
+      </form>
+    );
+  }
+}
