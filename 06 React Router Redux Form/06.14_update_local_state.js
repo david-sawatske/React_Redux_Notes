@@ -1,4 +1,4 @@
-ad// We rely on the fetch of the list of posts to remove deleted post from App state
+// We rely on the fetch of the list of posts to remove deleted post from App state
 // All of the posts we have in local memory still includes the deleted post
 // - we have to do a follow up req to fetch list without it
 
