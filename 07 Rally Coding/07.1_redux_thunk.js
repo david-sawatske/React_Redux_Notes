@@ -9,7 +9,7 @@
 //   * handles the middleware => Reducers => state part of the cycle
 //   * 'dispatch' makes sure the action gets sent to all of the Reducers
 
-// sample_app/src/actions/index
+
 // has single Action Creator 'fetchUsers()'
 // - makes API request and return the data back to the Reducers
 // - 'request' will not have any data until the it is complete
@@ -27,6 +27,7 @@
 // API request resolves => the 'dispatch' method is called with the data we
 // want to send to the Reducers
 
+// sample_app/src/actions/index
 import axios from 'axios';
 
 export function fetchUsers() {
