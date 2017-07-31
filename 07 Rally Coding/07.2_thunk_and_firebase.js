@@ -40,7 +40,7 @@
 // when we get a 'value' event from the 'Posts' ref from Firebase
 // and instantly 'dispatch' new action with 'type: FETCH_POSTS, payload: snapshot.val()'
 
-// How to delete a post
+// How to delete a post with Redux Thunk fn
 // when 'deletePost' Action Creator is called, a 'key' (ID) is passed in
 // return Redux Thunk fn 'dispatch' that finds the specific post by id
 // and removes it
@@ -48,7 +48,7 @@
 // when post is removed, automatically get a 'Posts.on('value'...' value event
 // - the value event includes the new list of posts
 
-// How to add a post
+// How to add a post with Redux Thunk fn
 // like above, but using 'push'  'return dispatch => Posts.push(post);'
 // '.push' in FB pushes new data into database, not into an array
 // the 'value' is triggered by the FB reference, that calls 'dispatch' method
@@ -69,16 +69,16 @@ export function fetchPosts() {
     Posts.on('value', snapshot => {
       dispatch({
         type: FETCH_POSTS,
-        payload: snapshot.val()
+        payload: snapshot.val() // JSON rep of data that was just loaded by FB
       });
     });
   };
 }
 
 export function createPost(post) {
-  return dispatch => Posts.push(post);
+  return dispatch => Posts.push(post); 
 }
 
 export function deletePost(key) {
-  return dispatch => Posts.child(key).remove();
+  return dispatch => Posts.child(key).remove(); // 'Posts.child(key)' FB reference
 }
