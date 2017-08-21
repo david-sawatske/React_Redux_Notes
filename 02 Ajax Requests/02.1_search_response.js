@@ -1,5 +1,5 @@
-// Downwards Data Flow - only the most parent component of the app should
-//                       be responsible for fetching data
+// Downwards Data Flow - only the most parent component concerned with the data
+//                       should be responsible for fetching data
 
 // index is the most parent component of the YT app
 //  => other components will be children of App component defined there

@@ -8,7 +8,7 @@
 
 // Data contained in the App (Redux)
 //  1. list of books
-//  2. currently selecteed books
+//  2. currently selected books
 
 // Views contained in the App (React - translates data so it can be seen on screen)
 //  1. list view
